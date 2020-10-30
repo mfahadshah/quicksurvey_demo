@@ -1,0 +1,13 @@
+<!-- Signature -->
+<div class="form-group{{ if(field.required) { }} required-control{{ } }}{{ if (field.containerClass) { }} {{= field.containerClass }}{{ } }}">
+    {{ if (field.label) { }}<label {{ if (field.labelClass) { }} class="{{= field.labelClass }}"{{ } }} for="{{= field.id }}">{{= field.label }}</label>{{ } }}
+    <div class="signature-pad">
+        <canvas id="{{= field.id }}" width="{{= field.width }}" height="{{= field.height }}" data-color="{{= field.color }}" {{ if (field.cssClass) { }} class="{{= field.cssClass }}"{{ } }}></canvas>
+    </div>
+    {{ if (field.helpText) { }}<p class="help-block">{{= field.helpText }}</p>{{ } }}
+    <div class="signature-pad-actions">
+        {{ if (field.clear) { }}<button type="button" id="clear_{{= field.id }}" name="clear_{{= field.id }}" class="btn btn-sm btn-default btn-clear" data-exclude="true">{{= field.clearText }}</button>{{ } }}
+        {{ if (field.undo) { }}<button type="button" id="undo_{{= field.id }}" name="undo_{{= field.id }}" class="btn btn-sm btn-default btn-undo" data-exclude="true">{{= field.undoText }}</button>{{ } }}
+    </div>
+    <input type="hidden" name="hidden_{{= field.id }}" id="hidden_{{= field.id }}" value="" data-label="{{= field.label }}" {{ if(field.required) {}} required{{ } }} />
+</div>

@@ -1,0 +1,19 @@
+html, body {
+    background: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 11pt !important;
+    overflow-y: visible !important;
+    line-height: 1;
+    color: #000 !important;
+}
+.breadcrumb, .buttons, .data-count a {
+    display: none;
+}
+.data-count {
+    margin-bottom: 20px !important;
+}
+.footer .container .pull-right {
+    float: none !important;
+    text-align: center !important;
+}

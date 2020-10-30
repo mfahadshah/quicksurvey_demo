@@ -1,0 +1,528 @@
+
+/*
+ * HTML Tags
+ */
+input.form-control {
+    cursor: auto;
+}
+textarea {
+    resize: vertical;
+}
+
+/**
+ * Sidebar
+ */
+
+.sidebar-outer {
+    position: relative;
+}
+.sidebar {
+    text-align: center;
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .sidebar {
+        position: fixed;
+        width: 300px;
+    }
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .sidebar {
+        position: fixed;
+        width: 360px;
+    }
+}
+
+/**
+ * Canvas of Form Builder
+ */
+
+#canvas {
+    background-color: #FFFFFF;
+    min-height: 500px;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(146, 161, 173, 0.5)
+}
+
+/**
+ * Widgets
+ */
+
+#widgets {
+    max-height: 500px;
+    padding: 10px 0 15px 0;
+}
+#widgets .tab-content {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+/**
+ * Widgets: Fields
+ */
+#fields {
+    max-height: 415px;
+    overflow-y: scroll;
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #fields {
+        overflow-y: hidden;
+    }
+}
+
+#fields .widget {
+    display: inline-block;
+    padding: 5px;
+    margin: 0 5px;
+    border: 1px solid transparent;
+}
+#fields .widget:hover {
+    cursor: move;
+    border:1px dashed #3B699F;
+}
+#fields .widget .btn-widget {
+    width: 139px;
+    background-color: transparent;
+    color: #434a54;
+    cursor: move;
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    #fields .widget .btn-widget {
+        width: 147px; /* -1px FF fix */
+    }
+}
+#fields .widget .btn-widget:hover {
+    background-color: transparent;
+    color: #434a54;
+}
+
+.number-icon {
+    border: 1px solid rgba(67,74,84,0.8);
+    font-size: 0.875em;
+    padding: 0 1px;
+    border-radius: 2px;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(67,74,84,0.004);
+}
+
+
+/**
+ * Widgets: Form Settings & Code Tabs
+ */
+
+#settings, #code {
+    text-align: left;
+    padding: 10px !important;
+    padding-bottom: 5px !important;
+}
+
+#code h4 {
+    font-size: 14px;
+    line-height: 1.42857143em;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+#code pre {
+    height: 380px;
+}
+#code pre code {
+    white-space: pre-wrap;
+}
+
+/*
+ * Modal & List Group
+ */
+
+#saved .modal-content {
+    background-color: #fffaed;
+    overflow: hidden;
+    border-radius: 4px !important;
+    box-shadow: none;
+}
+
+#saved .modal-header {
+    background-color: #ffce54;
+    margin-bottom: 15px;
+}
+#saved .modal-footer {
+    display: none;
+}
+#saved .modal-title {
+    color: #ffffff;
+}
+#saved .list-group {
+    box-shadow: 0 1px 2px rgba(255,235,186,.2);
+}
+#saved .list-group-item {
+    border-top-color: #ffebba;
+    border-radius: 4px;
+}
+#saved .list-group-item:hover {
+    background-color: #ffebba;
+}
+#saved .list-group-item .list-group-item-heading {
+    font-weight: bold;
+}
+
+/*
+ * Popover
+ */
+.popover .popover-content {
+    width: 272px;
+}
+/** Right Top Position **/
+.popover.rightTop {
+    margin-left: 10px;
+}
+.popover.rightTop .arrow {
+    top: 20%;
+    left: -11px;
+    margin-top: -11px;
+    border-left-width: 0
+}
+.popover.rightTop .arrow:after {
+    bottom: -10px;
+    left: 1px;
+    border-left-width: 0;
+    content: " "
+}
+/** Collapse Link **/
+.popover #collapseLink {
+    font-size: 12px;
+    text-decoration: none;
+}
+.popover #collapseLink:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Regular';  /* essential for enabling glyphicon */
+    content: "\e602";    /* adjust as needed, taken from bootstrap.css */
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.popover #collapseLink.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e224";    /* adjust as needed, taken from bootstrap.css */
+}
+.popover .tox .tox-menubar,
+.popover .tox .tox-toolbar .tox-toolbar__group:not(:nth-child(1)):not(:last-of-type) {
+    display: none;
+}
+.popover .tox .tox-toolbar-fullscreen,
+.popover .tox .tox-toolbar-fullscreen .tox-toolbar__group:not(:nth-child(1)):not(:last-of-type) {
+    display: flex;
+}
+.popover .tox .tox-statusbar__branding {
+    font-size: 9px;
+}
+
+/*
+ * Temp div
+ */
+
+.temp{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    z-index: 999999;
+    top: 0;
+    overflow-x: hidden;
+    left: 0;
+}
+.temp form {
+    padding: 8px 4px;
+    /*border: 1px dotted #ccc;*/
+    position: absolute;
+    /*background: white;*/
+    /*box-shadow: 0px 0px 30px #999;*/
+    -webkit-transition: -webkit-transform 0.1s ease-out;
+    overflow: hidden;
+}
+.temp form .form-group {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.temp form .checkbox input[type=checkbox], .temp form .checkbox-inline input[type=checkbox],
+.temp form .radio input[type=radio], .temp form .radio-inline input[type=radio] {
+    position: relative;
+    margin-left: 0;
+}
+.temp form .btn-widget {
+    width: 148px;
+    background-color: transparent;
+    color: #434a54;
+    cursor: move;
+}
+.temp form .btn-widget:hover {
+    background-color: transparent;
+    color: #434a54;
+}
+
+/*
+ * Save
+ */
+#actions {
+    position: fixed;
+    bottom: 15px;
+    padding: 15px;
+    z-index: 1;
+    border-radius: 4px;
+    /* Cross browser alpha transparent background */
+    background:rgb(255,255,255);
+    background: transparent\9;
+    background:rgba(255,255,255,0.3);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4cffffff,endColorstr=#4cffffff);
+    zoom: 1;
+}
+#actions:nth-child(n) { /* Fix alpha transparent background for ie9 */
+    filter: none;
+}
+
+/*
+ * Messages
+ */
+#messages {
+    position: fixed;
+    bottom: 50px;
+    padding: 15px;
+    width: 33.33333333%;
+    z-index: 1;
+    border-radius: 4px;
+}
+#messages .alert {
+    margin-bottom: 15px;
+}
+#messages .alert ul {
+    padding-left: 0;
+}
+#messages .alert ul li {
+    list-style-type: none;
+}
+
+/*
+ * All Targets
+ */
+
+#my-form {
+    width: 66.66666666%;
+}
+#my-form fieldset {
+    width: 100%;
+    padding-bottom: 150px;
+    color: #434a54;
+    border: none;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+}
+#canvas .placeholder {
+    padding: 0 15px;
+}
+#canvas .placeholder:before {
+    float: left;
+    content: " ";
+    height: 77px;
+    margin-top: 3px;
+    margin-bottom: 15px;
+    /*background: #e6e9ed;*/
+    width: 100%;
+    border: 2px dashed #e6e9ed;
+}
+#my-form input, #my-form select, #my-form textarea {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#my-form .legend {
+    padding: 0;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Hidden Field component */
+#canvas .component.component-hidden {
+    display: block !important;
+    clear:both;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+#canvas .component.component-hidden .div {
+    width: 100%;
+    min-height: 20px;
+}
+#canvas .component.component-hidden div:before {
+    content: "Hidden Field";
+    background-color: #E6E9ED;
+    padding: 5px 8px;
+    font-size: 10px;
+}
+/* Snippet component */
+#canvas .component.component-snippet {
+    display: block !important;
+    clear:both;
+}
+#canvas .component.component-snippet {
+    margin-bottom: 15px;
+}
+#canvas .component.component-snippet:before {
+    content: "Snippet";
+    background-color: #E6E9ED;
+    padding: 5px 8px;
+    font-size: 10px;
+}
+/* Sapcer component */
+#canvas .component.component-spacer:before {
+    content: "Spacer";
+    background-color: #E6E9ED;
+    padding: 5px 8px;
+    font-size: 10px;
+}
+/* Page Break component */
+#canvas .component.component-pagebreak {
+    display: block !important;
+    clear:both;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+#canvas .component.component-pagebreak .page-break {
+    width: 100%;
+    min-height: 20px;
+}
+#canvas .component.component-pagebreak .page-break:before {
+    content: "Page Break";
+    background-color: #E6E9ED;
+    padding: 5px 8px;
+    font-size: 10px;
+}
+/* Form Steps component */
+#canvas #form-steps {
+    width: 100%;
+    background-color: #FFFFFF;
+    margin-bottom: 15px;
+    min-height: 22px;
+}
+#canvas #form-steps:before {
+    content: "Form Steps";
+    background-color: #E6E9ED;
+    padding: 5px 8px;
+    font-size: 10px;
+    line-height: 22px;
+}
+#canvas #form-steps .progress .progress-bar {
+    width: 60%;
+}
+#canvas .component:hover {
+    cursor: pointer;
+}
+#canvas .component input, #canvas .component textarea, #canvas .component label,
+#canvas .component select, #canvas .component button {
+    cursor: pointer;
+}
+
+/*
+ * reCAPTCHA
+ */
+.rc {
+    height: 74px;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 1px rgba(0,0,0,0.08);
+    -webkit-box-shadow: 0 0 4px 1px rgba(0,0,0,0.08);
+    -moz-box-shadow: 0 0 4px 1px rgba(0,0,0,0.08);
+    background: #f9f9f9;
+    border: 1px solid #d3d3d3;
+    color: #000;
+    vertical-align:middle;
+    overflow: hidden;
+    margin-bottom: 10px;
+    position: relative;
+}
+.rc-checkbox {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    border: 2px solid #c1c1c1;
+    font-size: 1px;
+    margin-top: 23px;
+    margin-left: 20px;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+}
+.rc-label {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    max-width: 100%;
+    margin-top: 23px;
+    margin-left: 15px;
+    color: #000;
+    display: inline-block;
+}
+.rc-logo {
+    margin: 7px 20px 0 0;
+    width: 58px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    display: inline-block;
+}
+.rc-logo-img-portrait {
+    height: 32px;
+    margin: 0 13px 0 13px;
+    width: 32px;
+}
+.rc-logo-img {
+    background: url("https://www.gstatic.com/recaptcha/api2/logo_48.png") no-repeat;
+    background-size: 32px;
+}
+.rc-logo-text {
+    color: #9b9b9b;
+    cursor: default;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 10px;
+    margin-top: 5px;
+    text-align: center;
+}
+.rc-anchor-pt {
+    color: #9b9b9b;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 8px;
+    font-weight: normal;
+    margin: 0 20px 0 0;
+    right: 0;
+    text-align: right;
+    width: 276px;
+    position: absolute;
+}
+.rc-anchor-pt span {
+    color: #9b9b9b;
+    text-decoration: none;
+}
+
+/*
+ * Form Inline
+ */
+#my-form.form-inline {
+    /*width: 100%;*/
+}
+#canvas .form-inline .component {
+    display: inline-block;
+    margin-right: 4px;
+}
+#canvas .form-inline .component.component-heading,
+#canvas .form-inline .component.component-paragraph {
+    display: block;
+}
